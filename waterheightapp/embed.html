@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.2.1/chroma.min.js"></script>
+  <title>Access-Control-Allow-Origin</title>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat');
     #mapid{
@@ -168,6 +169,9 @@ for (var i=0 ; i < stateCenters.length ; i++)
         $.ajax({
           url: "https://waterservices.usgs.gov/nwis/iv?format=json&stateCd="+state+"&parameterCd=00065",
           dataType: 'json',
+          headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
           data: '',
           success: function(json){
             sites=json.value.timeSeries;
