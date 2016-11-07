@@ -167,8 +167,8 @@ for (var i=0 ; i < stateCenters.length ; i++)
     // GET WATER API DATA
       $(document).ready(function() {
         $.ajax({
-          url: "https://waterservices.usgs.gov/nwis/iv?format=json&stateCd="+state+"&parameterCd=00065",
-          dataType: 'json',
+          url: "http://waterservices.usgs.gov/nwis/iv?format=json&stateCd="+state+"&parameterCd=00065",
+          dataType: 'jsonp',
           method: 'GET',
           crossDomain: true,
           headers: {
