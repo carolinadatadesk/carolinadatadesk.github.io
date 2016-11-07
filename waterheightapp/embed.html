@@ -169,6 +169,7 @@ for (var i=0 ; i < stateCenters.length ; i++)
         $.ajax({
           url: "http://waterservices.usgs.gov/nwis/iv?format=json&stateCd="+state+"&parameterCd=00065",
           dataType: 'json',
+          method: 'GET',
           headers: {
                     'Access-Control-Allow-Origin': '*'
                 },
